@@ -21,8 +21,36 @@ class HelloWorldApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('appbar'),
         ),
-        body: Center(
-          child: Text('hello world'),
+        body: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              child: Center(
+                child: Text('hello world'),
+              ),
+              color: Colors.blue,
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              child: Center(
+                child: Text('hello world'),
+              ),
+              color: Colors.green,
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              child: Center(
+                child: Text('hello world'),
+              ),
+              color: Colors.red,
+              height: 100,
+              width: 100,
+            ),
+          ],
         ),
       ),
     );
