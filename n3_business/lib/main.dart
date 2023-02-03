@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(BusinessCard());
+  runApp(const BusinessCard());
 }
 
 class BusinessCard extends StatelessWidget {
@@ -11,15 +11,16 @@ class BusinessCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0XFFF4F4F4),
+        backgroundColor: const Color(0XFFF4F4F4),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
               radius: 120,
               child: Container(
                 width: 230.0,
                 height: 230.0,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                     fit: BoxFit.fill,
@@ -32,65 +33,59 @@ class BusinessCard extends StatelessWidget {
               'Youcef Aidoun',
               style: TextStyle(
                 color: Colors.blue[800],
-                fontSize: 45,
+                fontSize: 40,
                 fontFamily: 'Allura',
+                fontWeight: FontWeight.bold,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.all(16),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
+            const Text(
+              'FLUTTER DEVELOPER',
+              style: TextStyle(
+                color: Colors.black54,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const Divider(
+              thickness: 1,
+              indent: 100,
+              endIndent: 100,
+            ),
+            Card(
+              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  size: 40,
+                  color: Colors.blue,
                 ),
-                height: 70,
-                child: Row(
-                  children: [
-                    Spacer(flex: 1),
-                    Icon(
-                      Icons.phone,
-                      size: 40,
-                      color: Colors.blue,
-                    ),
-                    Spacer(flex: 1),
-                    Text(
-                      ' +213 78 76 65 53',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'Allura',
-                      ),
-                    ),
-                    Spacer(flex: 2),
-                  ],
+                title: Text(
+                  ' (+213) 12 34 56 78',
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.all(16),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
+            Card(
+              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const ListTile(
+                leading: Icon(
+                  Icons.email,
+                  size: 40,
+                  color: Colors.blue,
                 ),
-                height: 70,
-                child: Row(
-                  children: [
-                    Spacer(flex: 1),
-                    Icon(
-                      Icons.email,
-                      size: 40,
-                      color: Colors.blue,
-                    ),
-                    Spacer(flex: 1),
-                    Text(
-                      ' youcefaidoun@email.com',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'Allura',
-                      ),
-                    ),
-                    Spacer(flex: 1),
-                  ],
+                title: Text(
+                  ' youcefaidoun@email.com',
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
                 ),
               ),
             ),
