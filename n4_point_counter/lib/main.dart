@@ -34,19 +34,59 @@ class pointCounter extends StatelessWidget {
               ),
             ),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.orange,
+                  // fixedSize: Size(120, 40),
+                  minimumSize: Size(150, 50)),
               onPressed: () {},
               child: Text(
-                'Add 1 Point',
+                'Add 1 Poin',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
+                  color: Colors.black87,
                 ),
               ),
+            ),
+            const Spacer(
+              flex: 1,
+            ),
+            ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.orange,
+                  primary: Colors.orange,
+                  // fixedSize: Size(120, 40),
+                  minimumSize: Size(150, 50)),
+              onPressed: () {},
+              child: Text(
+                'Add 1 Poin',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
               ),
+            ),
+            const Spacer(
+              flex: 1,
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.orange,
+                  // fixedSize: Size(120, 40),
+                  minimumSize: Size(150, 50)),
+              onPressed: () {},
+              child: Text(
+                'Add 1 Poin',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                ),
+              ),
+            ),
+            const Spacer(
+              flex: 12,
             ),
           ],
         ),
+        
       ),
     );
   }
